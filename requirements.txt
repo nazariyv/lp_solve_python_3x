@@ -1,0 +1,7 @@
+Flask
+Redis
+pandas
+numpy
+psycopg2
+cvxopt
+pyodbc
