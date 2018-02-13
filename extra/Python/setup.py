@@ -26,7 +26,7 @@ else:
   WIN32 = 'WIN32'
   LPSOLVE55 = '../../lpsolve55/bin/win32'
 setup (name = "lpsolve55",
-       version = "5.5.0.9",
+       version = "5.5.2.0",
        description = "Linear Program Solver, Interface to lpsolve",
        author = "Peter Notebaert",
        author_email = "lpsolve@peno.be",
