@@ -4,14 +4,16 @@ import sys
 import os
 p = sys.prefix
 NUMPYPATH = '.'
+print("-------------------------------------------------------------------------")
+print("INSTALLING LP_SOLVE FOR PYTHON 3.6")
 if os.path.isdir(p + '/include/numpy'):
   NUMPY = 'NUMPY'
 elif os.path.isdir(p + '/Lib/site-packages/numpy/core/include/numpy'):
   NUMPY = 'NUMPY'
   NUMPYPATH = p + '/Lib/site-packages/numpy/core/include'
-elif os.path.isdir(p + '/lib/python3.4/site-packages/numpy/core/include/numpy'):
+elif os.path.isdir(p + '/lib/python3.6/site-packages/numpy/core/include/numpy'):
   NUMPY = 'NUMPY'
-  NUMPYPATH = p + '/lib/python3.4/site-packages/numpy/core/include'
+  NUMPYPATH = p + '/lib/python3.6/site-packages/numpy/core/include'
 else:
   NUMPY = 'NONUMPY'
 print ('numpy: ' + NUMPY)
@@ -19,6 +21,7 @@ windir = getenv('windir')
 if windir == None:
   WIN32 = 'NOWIN32'
   LPSOLVE55 = '../../lpsolve55/bin/ux64'
+  print("LPSOLVE55:"+LPSOLVE55)
 else:
   WIN32 = 'WIN32'
   LPSOLVE55 = '../../lpsolve55/bin/win32'
