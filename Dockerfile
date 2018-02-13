@@ -23,7 +23,9 @@ RUN mkdir -p /usr/lib/lp_solve/ && cd /usr/lib/lp_solve/ \
 	&& git clone https://github.com/nazariyv/lp_solve_python_3x.git \
 	&& cp -R lp_solve_python_3x/extra/Python/ /usr/lib/lp_solve/lp_solve_5.5/extra/ \
 	&& cd /usr/lib/lp_solve/lp_solve_5.5/lpsolve55 && chmod a+x ccc && sh ccc \
-	&& ln -svf /usr/lib/lp_solve/lp_solve_5.5 /usr/lib/lp_solve/lp_solve_5.5/lpsolve55/bin/ux64
+	&& ln -svf /usr/lib/lp_solve/lp_solve_5.5 /usr/lib/lp_solve/lp_solve_5.5/lpsolve55/bin/ux64 \
+	&& cd /usr/lib/lp_solve/lp_solve_5.5/extra/Python && python setup.py install \
+	&& rm -rf /usr/lib/lp_solve/lp_solve.tar.gz && rm -rf /lp_solve_python_3.x
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
